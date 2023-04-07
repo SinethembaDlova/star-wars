@@ -1,12 +1,13 @@
 import React, { useContext } from 'react';
-import { Container, Heading } from '../../globalStyles';
+import { Container, Heading, Row } from '../../globalStyles';
 import { MoviesContext } from 'context/movies';
 import { Link } from 'react-router-dom';
+import Table from '../../components/Table';
 
 const Movies = () => {
   const { movies, isLoading } = useContext(MoviesContext);
 
-  const MoviesData = (movies) =>
+  const moviesData = (movies) =>
     movies.map((movie, index) => ({
       index: index + 1,
       title: movie.title,
@@ -21,6 +22,14 @@ const Movies = () => {
   return (
     <Container>
       <Heading>Movies</Heading>
+      <Row justify="center">
+        {movies.length > 0 && (
+          <Table
+            columnNames={['#', 'Title', 'Director', 'Producer', 'Released Date', 'Actions']}
+            data={moviesData(movies)}
+          />
+        )}
+      </Row>
     </Container>
   );
 };

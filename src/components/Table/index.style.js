@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const StyledTable = styled.table`
   border-collapse: collapse;
-  font-size: 1.1em;
+  font-size: 1em;
   min-width: 500px;
   align-items: center;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -16,7 +16,7 @@ const StyledTable = styled.table`
   th,
   td {
     text-align: center;
-    padding: 18px 18px;
+    padding: 16px 16px;
   }
 
   tbody tr {

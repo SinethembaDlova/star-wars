@@ -22,7 +22,7 @@ export const Container = styled.div`
 export const Heading = styled.h2`
   font-size: clamp(1.3rem, 13vw, 3.1rem);
   margin: ${({ margin }) => (margin ? margin : '')};
-  margin-bottom: ${({ mb }) => (mb ? mb : '')};
+  margin-bottom: ${({ mb }) => (mb ? mb : '50px')};
   margin-top: ${({ mt }) => (mt ? mt : '')};
   color: '#274064';
   letter-spacing: 0.1rem;
@@ -37,7 +37,7 @@ export const Row = styled.div`
   gap: ${({ gap }) => (gap ? gap : '')};
   padding: ${({ padding }) => (padding ? padding : '')};
   margin: ${({ margin }) => (margin ? margin : '')};
-  margin-bottom: ${({ mb }) => (mb ? mb : '30px')};
+  margin-bottom: ${({ mb }) => (mb ? mb : '')};
   position: ${({ position }) => (position ? position : '')};
   width: ${({ width }) => (width ? width : 'auto')};
   min-width: ${({ minWidth }) => (minWidth ? minWidth : 'auto')};
