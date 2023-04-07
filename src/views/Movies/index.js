@@ -1,14 +1,12 @@
-import React, { useEffect } from 'react';
+import React, { useContext } from 'react';
 import { Container, Heading } from '../../globalStyles';
-import fetchAllMovies from '../../api/fetchAllMovies';
+import { MoviesContext } from 'context/movies';
 
 const Movies = () => {
-  useEffect(() => {
-    (async () => {
-      const data = await fetchAllMovies();
-      console.log('data', data);
-    })();
-  }, []);
+  const { movies, isLoading } = useContext(MoviesContext);
+
+  if (isLoading) console.log('LOADING!!!');
+
   return (
     <Container>
       <Heading>Movies</Heading>
