@@ -5,6 +5,7 @@ import { MoviesProvider } from 'context/movies';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Movies from './views/Movies';
+import Movie from './views/Movie';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Navigate to="/movies" replace />} />
           <Route exact path="/movies" element={<Movies />} />
+          <Route exact path="/movies/:id" element={<Movie />} />
         </Routes>
       </Router>
     </MoviesProvider>
