@@ -13,7 +13,7 @@ const Movies = () => {
       director: movie.director,
       producer: movie.producer,
       release_date: movie.release_date,
-      actions: <Link to={`/movies/${movie.title}`}>View Movie Details</Link>,
+      actions: <Link to={`/movies/${movie.movieId}`}>View Movie Details</Link>,
     }));
 
   if (isLoading) console.log('LOADING!!!');

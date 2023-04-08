@@ -10,4 +10,6 @@ const makeRequest = async (method, data) => {
   }
 };
 
-export default makeRequest;
+const getId = (url) => url.split('/').filter(Boolean).pop();
+
+export { makeRequest, getId };

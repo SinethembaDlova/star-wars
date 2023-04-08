@@ -1,5 +1,9 @@
-import makeRequest from '../utils/api';
+import { makeRequest, getId } from '../utils/api';
 
-const fetchAllMovies = () => makeRequest('get');
+const fetchAllMovies = async () => {
+  const movies = await makeRequest('get');
+  const moviesWithIds = movies.map((movie) => ({ ...movie, movieId: getId(movie.url) }));
+  return moviesWithIds;
+};
 
 export default fetchAllMovies;
