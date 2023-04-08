@@ -8,8 +8,7 @@ const Movies = () => {
   const { movies, isLoading } = useContext(MoviesContext);
 
   const moviesData = (movies) =>
-    movies.map((movie, index) => ({
-      index: index + 1,
+    movies.map((movie) => ({
       title: movie.title,
       director: movie.director,
       producer: movie.producer,
@@ -25,7 +24,7 @@ const Movies = () => {
       <Row justify="center">
         {movies.length > 0 && (
           <Table
-            columnNames={['#', 'Title', 'Director', 'Producer', 'Released Date', 'Actions']}
+            columnNames={['Title', 'Director', 'Producer', 'Release Date', 'Actions']}
             data={moviesData(movies)}
           />
         )}
