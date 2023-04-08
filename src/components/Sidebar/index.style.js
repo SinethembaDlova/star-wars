@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { ReactComponent as Logo } from '../../assets/images/logo.svg';
 
 const SidebarContainer = styled.div`
   position: fixed;
@@ -71,11 +72,6 @@ const LogoContainer = styled(StyledNavLink)`
   margin-left: 0px;
   border-style: ${({ act }) => (!act ? 'solid' : 'none')};
 
-  img {
-    width: 60px;
-    height: 60px;
-  }
-
   @media only screen and (max-width: 600px) {
     margin: -3px;
     margin-left: 0px;
@@ -86,4 +82,9 @@ const LogoContainer = styled(StyledNavLink)`
   }
 `;
 
-export { SidebarContainer, SidebarMenuContainer, StyledNavLink, LogoContainer };
+const StyledLogo = styled(Logo)`
+  fill: rgba(255, 255, 255, 5);
+  height: 40px;
+`;
+
+export { SidebarContainer, SidebarMenuContainer, StyledNavLink, LogoContainer, StyledLogo };

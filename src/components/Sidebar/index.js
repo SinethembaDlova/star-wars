@@ -5,6 +5,7 @@ import {
   SidebarMenuContainer,
   StyledNavLink,
   LogoContainer,
+  StyledLogo,
 } from './index.style';
 
 const Sidebar = ({ toggle }) => {
@@ -22,7 +23,7 @@ const Sidebar = ({ toggle }) => {
       <SidebarMenuContainer>
         <div>
           <LogoContainer id="item" to="/">
-            <img src="https://logodix.com/logo/1931246.png" alt="" />
+            <StyledLogo />
           </LogoContainer>
 
           {items.map((item, index) => {
