@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import fetchAllMovies from '../../api/fetchAllMovies';
+import fetchMovieDetails from 'api/fetchMovieDetails';
 
 const MoviesContext = createContext();
 
@@ -27,11 +28,23 @@ function MoviesProvider({ children }) {
     })();
   }, []);
 
+  const getMovieDetails = async (id) => {
+    try {
+      setIsLoading(true);
+      const results = await fetchMovieDetails(id);
+      setMovies(results);
+      setIsLoading(false);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <MoviesContext.Provider
       value={{
         movies,
         isLoading,
+        getMovieDetails,
       }}>
       {children}
     </MoviesContext.Provider>
