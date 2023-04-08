@@ -39,7 +39,7 @@ const Table = ({ columnNames, data }) => {
               {columnNames.map((headerName, index) => (
                 <th key={index} onClick={() => handleSort(columnKeyName(headerName))}>
                   {headerName.toUpperCase()}
-                  {sortConfig.key === columnKeyName(headerName) && (
+                  {sortConfig.key && sortConfig.key === columnKeyName(headerName) && (
                     <span> {sortConfig.direction === 'ascending' ? ' ▼' : ' ▲'}</span>
                   )}
                 </th>
