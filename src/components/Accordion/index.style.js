@@ -1,22 +1,23 @@
-import { Col } from '../../globalStyles';
 import styled from 'styled-components';
 
-const ListColumn = styled(Col)`
-  justify-content: center;
-  align-items: center;
-  width: 100%
-  background: #f3f3f3;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+const AccordionContainer = styled.div`
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 10px;
+`;
 
-  h5 {
-    background-color: #081b4b;
-    color: #ffffff;
-    text-align: left;
-    padding: 16px;
-    margin: 0;
-  }
+const AccordionHeader = styled.div`
+  background-color: #274064;
+  color: white;
+  padding: 20px;
+  cursor: pointer;
+`;
 
+const AccordionContent = styled.div`
+  padding: 10px;
   li {
+    margin-bottom: 10px;
     text-align: center;
     padding: 16px 16px;
     border-bottom: 1px solid #dddddd;
@@ -30,18 +31,6 @@ const ListColumn = styled(Col)`
       font-weight: bold;
       color: #009879;
     }
-  }
-`;
-
-const ListHeading = styled.h5`
-  font-weight: 600;
-  font-size: 1.3rem;
-  letter-spacing: 2px;
-
-  @media screen and (max-width: 768px) {
-    font-weight: 400;
-    font-size: 1rem;
-    letter-spacing: 1.3px;
   }
 `;
 
@@ -64,4 +53,4 @@ const ListItem = styled.li`
   }
 `;
 
-export { ListColumn, ListHeading, List, ListItem };
+export { AccordionContainer, AccordionHeader, AccordionContent, List, ListItem };

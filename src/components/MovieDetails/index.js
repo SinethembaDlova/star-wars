@@ -16,6 +16,7 @@ import {
 import List from '../List';
 import { Row } from 'globalStyles';
 import { Col } from 'globalStyles';
+import Accordion from 'components/Accordion';
 
 const MovieDetails = ({ details }) => {
   const {
@@ -59,6 +60,7 @@ const MovieDetails = ({ details }) => {
         </Col>
         <Col width="30%">
           <ListWrapper>
+            <Accordion heading="Planets" content={planets} />
             <List heading="Planets" listData={planets} />
             <List heading="Species" listData={species} />
             <List heading="Vehicles" listData={vehicles} />
