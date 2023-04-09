@@ -39,10 +39,19 @@ const Description = styled.p`
   letter-spacing: 2px;
 `;
 
-const Label = styled.span`
-  font-size: clamp(0.8rem, 1.4vw, 1.3rem);
-  line-height: 25px;
-  letter-spacing: 2px;
+const Label = styled.h4`
+  font-family: inherit;
+  font-size: 1.8rem;
+  color: #9d9d9d;
+  margin-bottom: 1.5rem;
+`;
+
+const Team = styled.p`
+  font-family: inherit;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
 `;
 
 const ListTextWrapper = styled.div`
@@ -71,6 +80,7 @@ export {
   BackIcon,
   Title,
   Description,
+  Team,
   Label,
   ListTextWrapper,
   ListWrapper,

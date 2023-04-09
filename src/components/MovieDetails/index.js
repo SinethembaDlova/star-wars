@@ -6,6 +6,7 @@ import {
   BackIcon,
   Title,
   Description,
+  Team,
   Label,
   ListWrapper,
 } from './index.style';
@@ -35,15 +36,9 @@ const MovieDetails = ({ details }) => {
         </BackIcon>
       </HeadingContainer>
       <Title>{title}</Title>
+      <Team>Director by: {director}</Team>
+      <Team>Producer by: {producer}</Team>
       <Description>{opening_crawl}</Description>
-      <div>
-        <Label>Director: </Label>
-        <span>{director}</span>
-      </div>
-      <div>
-        <Label>Producer: </Label>
-        <span>{producer}</span>
-      </div>
       <div>
         <Label>Created: </Label>
         <span>{created}</span>
