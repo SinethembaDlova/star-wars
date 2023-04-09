@@ -2,21 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   MovieDetailsContainer,
-  // Back,
+  HeadingContainer,
+  BackIcon,
   Title,
   Description,
   Label,
   ListWrapper,
 } from './index.style';
 import List from '../List';
-{
-  /* <Back>
-  <i className="material-icons">arrow_back_ios</i>
-  <span>
-    <Heading>{title}</Heading>
-  </span>
-</Back> */
-}
 
 const MovieDetails = ({ details }) => {
   const {
@@ -35,6 +28,12 @@ const MovieDetails = ({ details }) => {
 
   return (
     <MovieDetailsContainer>
+      <HeadingContainer>
+        <BackIcon to="/movies">
+          <i className="material-icons">arrow_back_ios</i>
+          <span>Back</span>
+        </BackIcon>
+      </HeadingContainer>
       <Title>{title}</Title>
       <Description>{opening_crawl}</Description>
       <div>

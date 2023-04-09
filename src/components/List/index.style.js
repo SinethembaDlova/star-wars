@@ -1,25 +1,5 @@
 import styled from 'styled-components';
 
-const ListTextWrapper = styled.div`
-  position: relative;
-  padding: 0 0 20px;
-  margin-bottom: 4rem;
-`;
-
-const ListWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 4rem;
-  grid-gap: 2rem;
-  @media screen and (max-width: 1100px) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 3rem;
-  }
-  @media screen and (max-width: 568px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-`;
-
 const ListColumn = styled.div`
   display: flex;
   flex-flow: column;
@@ -60,4 +40,4 @@ const ListItem = styled.li`
   }
 `;
 
-export { ListTextWrapper, ListWrapper, ListColumn, ListHeading, List, ListItem };
+export { ListColumn, ListHeading, List, ListItem };

@@ -1,31 +1,48 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { Row } from '../../globalStyles';
+import { Row, Heading } from '../../globalStyles';
 
 const MovieDetailsContainer = styled.div`
   background-csolor: #f5f5f5;
 `;
 
-const Back = styled(Row)`
+const HeadingContainer = styled(Row)`
   background: inherit;
   color: dark silver;
+`;
+
+const BackIcon = styled(Link)`
+  color: inherit;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 
   i {
     font-size: 3rem;
   }
+
+  &:hover {
+    opacity: 100%;
+  }
 `;
 
-const Title = styled.h1`
-  font-size: 36px;
-  margin-bottom: 16px;
+const Title = styled(Heading)`
+  margin-bottom: 10px;
 `;
 
 const Description = styled.p`
-  font-size: 24px;
-  margin-bottom: 16px;
+  font-size: clamp(1rem, 1.3vw, 1.5rem);
+  line-height: 25px;
+  letter-spacing: 2px;
 `;
 
 const Label = styled.span`
-  font-weight: bold;
+  font-size: clamp(0.8rem, 1.4vw, 1.3rem);
+  line-height: 25px;
+  letter-spacing: 2px;
 `;
 
 const ListTextWrapper = styled.div`
@@ -48,4 +65,13 @@ const ListWrapper = styled.div`
   }
 `;
 
-export { MovieDetailsContainer, Back, Title, Description, Label, ListTextWrapper, ListWrapper };
+export {
+  MovieDetailsContainer,
+  HeadingContainer,
+  BackIcon,
+  Title,
+  Description,
+  Label,
+  ListTextWrapper,
+  ListWrapper,
+};
