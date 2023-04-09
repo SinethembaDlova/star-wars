@@ -10,6 +10,13 @@ const makeRequest = async (method, path = API_URL) => {
   }
 };
 
+const multipleRequests = async (urlList) => {
+  urlList.map(async (url) => {
+    const characterResponse = await makeRequest('get', url);
+    return characterResponse?.data;
+  });
+};
+
 const getId = (url) => url.split('/').filter(Boolean).pop();
 
-export { makeRequest, getId };
+export { makeRequest, multipleRequests, getId };
