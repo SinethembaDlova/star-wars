@@ -30,10 +30,8 @@ function MoviesProvider({ children }) {
 
   const getMovieDetails = async (id) => {
     try {
-      setIsLoading(true);
       const results = await fetchMovieDetails(id);
-      setMovies(results);
-      setIsLoading(false);
+      return results;
     } catch (error) {
       console.error(error);
     }
