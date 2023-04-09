@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Container } from '../../globalStyles';
 import { MoviesContext } from 'context/movies';
 import MovieDetails from 'components/MovieDetails';
+import Loader from 'components/Loader';
 
 const Movie = () => {
   const { getMovieDetails, isLoading } = useContext(MoviesContext);
@@ -20,8 +21,6 @@ const Movie = () => {
     starships: [],
     vehicles: [],
   });
-
-  if (isLoading) console.log('LOADING!!!');
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -50,6 +49,8 @@ const Movie = () => {
 
     fetchMovieDetails();
   }, [id]);
+
+  if (isLoading) return <Loader />;
 
   return (
     <Container>

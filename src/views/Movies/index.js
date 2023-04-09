@@ -3,6 +3,7 @@ import { Container, Heading, Row } from '../../globalStyles';
 import { MoviesContext } from 'context/movies';
 import { Link } from 'react-router-dom';
 import Table from '../../components/Table';
+import Loader from 'components/Loader';
 
 const Movies = () => {
   const { movies, isLoading } = useContext(MoviesContext);
@@ -16,7 +17,7 @@ const Movies = () => {
       actions: <Link to={`/movies/${movie.id}`}>View Movie Details</Link>,
     }));
 
-  if (isLoading) console.log('LOADING!!!');
+  if (isLoading) return <Loader />;
 
   return (
     <Container>
