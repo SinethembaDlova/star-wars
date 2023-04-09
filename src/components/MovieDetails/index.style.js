@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { Row, Heading } from '../../globalStyles';
+import { Row, Col, Heading } from '../../globalStyles';
 
 const MovieDetailsContainer = styled.div`
   background-csolor: #f5f5f5;
@@ -60,18 +60,9 @@ const ListTextWrapper = styled.div`
   margin-bottom: 4rem;
 `;
 
-const ListWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+const ListWrapper = styled(Col)`
   margin-top: 4rem;
   grid-gap: 2rem;
-  @media screen and (max-width: 1100px) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 3rem;
-  }
-  @media screen and (max-width: 568px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
 `;
 
 export {

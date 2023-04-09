@@ -11,6 +11,8 @@ import {
   ListWrapper,
 } from './index.style';
 import List from '../List';
+import { Row } from 'globalStyles';
+import { Col } from 'globalStyles';
 
 const MovieDetails = ({ details }) => {
   const {
@@ -35,25 +37,31 @@ const MovieDetails = ({ details }) => {
           <span>Back</span>
         </BackIcon>
       </HeadingContainer>
-      <Title>{title}</Title>
-      <Team>Director by: {director}</Team>
-      <Team>Producer by: {producer}</Team>
-      <Description>{opening_crawl}</Description>
-      <div>
-        <Label>Created: </Label>
-        <span>{created}</span>
-      </div>
-      <div>
-        <Label>Release date: </Label>
-        <span>{release_date}</span>
-      </div>
-      <ListWrapper>
-        <List heading="Planets" listData={planets} />
-        <List heading="Species" listData={species} />
-        <List heading="Vehicles" listData={vehicles} />
-        <List heading="Starships" listData={starships} />
-        <List heading="Characters" listData={characters} />
-      </ListWrapper>
+      <Row justify="center">
+        <Col width="70%">
+          <Title>{title}</Title>
+          <Team>Director by: {director}</Team>
+          <Team>Producer by: {producer}</Team>
+          <Description>{opening_crawl}</Description>
+          <div>
+            <Label>Created: </Label>
+            <span>{created}</span>
+          </div>
+          <div>
+            <Label>Release date: </Label>
+            <span>{release_date}</span>
+          </div>
+        </Col>
+        <Col width="30%">
+          <ListWrapper>
+            <List heading="Planets" listData={planets} />
+            <List heading="Species" listData={species} />
+            <List heading="Vehicles" listData={vehicles} />
+            <List heading="Starships" listData={starships} />
+            <List heading="Characters" listData={characters} />
+          </ListWrapper>
+        </Col>
+      </Row>
     </MovieDetailsContainer>
   );
 };
