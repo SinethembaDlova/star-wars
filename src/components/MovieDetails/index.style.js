@@ -50,7 +50,7 @@ const Team = styled.p`
 `;
 
 const ListWrapper = styled(Col)`
-  margin-top: 4rem;
+  margin-top: 1rem;
   grid-gap: 2rem;
 `;
 

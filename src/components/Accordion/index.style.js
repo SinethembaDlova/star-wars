@@ -14,7 +14,7 @@ const AccordionHeader = styled(Row)`
   background-color: #274064;
   color: white;
   text-transform: uppercase;
-  padding: 20px;
+  padding: 18px;
   cursor: pointer;
 
   i {
@@ -23,9 +23,8 @@ const AccordionHeader = styled(Row)`
 `;
 
 const AccordionContent = styled.div`
-  padding: 10px;
   li {
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
     text-align: center;
     padding: 16px 16px;
     border-bottom: 1px solid #dddddd;
@@ -44,8 +43,6 @@ const AccordionContent = styled.div`
 
 const List = styled.ul`
   list-style-type: none;
-  margin: 0;
-  padding: 0;
 `;
 
 const ListItem = styled.li`
