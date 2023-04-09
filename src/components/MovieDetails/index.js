@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   MovieDetailsContainer,
-  HeadingContainer,
+  BackContainer,
   BackIcon,
   Title,
   Description,
@@ -34,12 +34,12 @@ const MovieDetails = ({ details }) => {
 
   return (
     <MovieDetailsContainer>
-      <HeadingContainer>
+      <BackContainer>
         <BackIcon to="/movies">
           <i className="material-icons">arrow_back_ios</i>
           <span>Back</span>
         </BackIcon>
-      </HeadingContainer>
+      </BackContainer>
       <Row justify="center">
         <Col width="70%">
           <Title>{title}</Title>

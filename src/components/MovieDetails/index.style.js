@@ -6,7 +6,7 @@ const MovieDetailsContainer = styled.div`
   background-csolor: #f5f5f5;
 `;
 
-const HeadingContainer = styled(Row)`
+const BackContainer = styled(Row)`
   background: inherit;
   color: dark silver;
 `;
@@ -49,12 +49,6 @@ const Team = styled.p`
   }
 `;
 
-const ListTextWrapper = styled.div`
-  position: relative;
-  padding: 0 0 20px;
-  margin-bottom: 4rem;
-`;
-
 const ListWrapper = styled(Col)`
   margin-top: 4rem;
   grid-gap: 2rem;
@@ -85,12 +79,11 @@ const Value = styled.span`
 
 export {
   MovieDetailsContainer,
-  HeadingContainer,
+  BackContainer,
   BackIcon,
   Title,
   Description,
   Team,
-  ListTextWrapper,
   ListWrapper,
   FooterContainer,
   FooterItem,
