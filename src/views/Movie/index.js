@@ -14,11 +14,11 @@ const Movie = () => {
     producer: '',
     created: '',
     release_date: '',
-    characters: ['Siyanda Josi', 'Papasi Pope', 'Ayanda Mazi', 'Sondeza Joke'],
-    planets: ['Earth', 'Mars', 'Space'],
-    species: ['Fish', 'Dope Shit', 'Shark'],
-    starships: ['Erazone', 'Popacsfa', 'Zodiac'],
-    vehicles: ['Mazarati', 'Tesla', 'Benz', 'Ferari'],
+    characters: [],
+    planets: [],
+    species: [],
+    starships: [],
+    vehicles: [],
   });
 
   if (isLoading) console.log('LOADING!!!');
@@ -30,12 +30,17 @@ const Movie = () => {
           const movie = await getMovieDetails(id);
           setMovieDetails({
             ...movieDetails,
-            title: movie.title,
-            opening_crawl: movie.opening_crawl,
-            director: movie.director,
-            producer: movie.producer,
-            created: movie.created,
-            release_date: movie.release_date,
+            title: movie?.title,
+            opening_crawl: movie?.opening_crawl,
+            director: movie?.director,
+            producer: movie?.producer,
+            created: movie?.created,
+            release_date: movie?.release_date,
+            planets: movie?.planets,
+            species: movie?.species,
+            vehicles: movie?.vehicles,
+            starships: movie?.starships,
+            characters: movie?.characters,
           });
         } catch (error) {
           console.error('Failed to fetch movie details:', error);
