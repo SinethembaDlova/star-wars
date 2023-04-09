@@ -1,5 +1,6 @@
 import { makeRequest } from '../utils/api';
 import API_URL from '../constants/api';
+import dateOnly from '../utils/date';
 
 const fetchMovieDetails = async (id) => {
   const movieUrl = API_URL + id;
@@ -41,7 +42,7 @@ const fetchMovieDetails = async (id) => {
     opening_crawl: movie?.opening_crawl,
     director: movie?.director,
     producer: movie?.producer,
-    created: movie?.created,
+    created: dateOnly(movie?.created),
     release_date: movie?.release_date,
     planets,
     species,
