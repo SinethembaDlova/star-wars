@@ -36,13 +36,23 @@ const fetchMovieDetails = async (id) => {
   });
   const vehicles = await Promise.all(vehicleRequests);
 
-  console.log('characters: ', characters);
-  console.log('planets: ', planets);
-  console.log('species: ', species);
-  console.log('starships: ', starships);
-  console.log('vehicles: ', vehicles);
+  const movieDetails = {
+    title: movie?.title,
+    opening_crawl: movie?.opening_crawl,
+    director: movie?.director,
+    producer: movie?.producer,
+    created: movie?.created,
+    release_date: movie?.release_date,
+    planets,
+    species,
+    vehicles,
+    starships,
+    characters,
+  };
 
-  return movie;
+  console.log('movieDetails: ', movieDetails);
+
+  return movieDetails;
 };
 
 export default fetchMovieDetails;
