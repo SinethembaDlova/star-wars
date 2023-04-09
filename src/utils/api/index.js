@@ -4,7 +4,7 @@ import API_URL from '../../constants/api';
 const makeRequest = async (method, path = '') => {
   try {
     const response = await axios[method](`${API_URL}${path}`);
-    return response?.data?.results;
+    return response;
   } catch (error) {
     throw new Error(`API request failed: ${error.message}`);
   }
