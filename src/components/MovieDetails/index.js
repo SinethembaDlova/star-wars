@@ -7,8 +7,11 @@ import {
   Title,
   Description,
   Team,
-  Label,
   ListWrapper,
+  FooterContainer,
+  FooterItem,
+  Label,
+  Value,
 } from './index.style';
 import List from '../List';
 import { Row } from 'globalStyles';
@@ -43,14 +46,16 @@ const MovieDetails = ({ details }) => {
           <Team>Director by: {director}</Team>
           <Team>Producer by: {producer}</Team>
           <Description>{opening_crawl}</Description>
-          <div>
-            <Label>Created: </Label>
-            <span>{created}</span>
-          </div>
-          <div>
-            <Label>Release date: </Label>
-            <span>{release_date}</span>
-          </div>
+          <FooterContainer>
+            <FooterItem width="50%">
+              <Label>Created: </Label>
+              <Value>{created}</Value>
+            </FooterItem>
+            <FooterItem width="50%">
+              <Label>Release date: </Label>
+              <Value>{release_date}</Value>
+            </FooterItem>
+          </FooterContainer>
         </Col>
         <Col width="30%">
           <ListWrapper>

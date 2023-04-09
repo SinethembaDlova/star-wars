@@ -37,13 +37,8 @@ const Description = styled.p`
   font-size: clamp(1rem, 1.3vw, 1.5rem);
   line-height: 25px;
   letter-spacing: 2px;
-`;
-
-const Label = styled.h4`
-  font-family: inherit;
-  font-size: 1.8rem;
-  color: #9d9d9d;
-  margin-bottom: 1.5rem;
+  padding-right: 20px;
+  margin-bottom: 10px;
 `;
 
 const Team = styled.p`
@@ -65,6 +60,29 @@ const ListWrapper = styled(Col)`
   grid-gap: 2rem;
 `;
 
+const FooterContainer = styled(Row)`
+  align-items: center;
+  border-top: 1px solid #9d9d9d;
+  padding-top: 1.5rem;
+  margin-right: 1.5rem;
+  margin-top: 1.5rem;
+`;
+
+const FooterItem = styled(Row)``;
+
+const Label = styled.h4`
+  font-family: inherit;
+  font-size: 1.8rem;
+  color: #9d9d9d;
+  margin-bottom: 1.5rem;
+`;
+
+const Value = styled.span`
+  font-family: inherit;
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+`;
+
 export {
   MovieDetailsContainer,
   HeadingContainer,
@@ -72,7 +90,10 @@ export {
   Title,
   Description,
   Team,
-  Label,
   ListTextWrapper,
   ListWrapper,
+  FooterContainer,
+  FooterItem,
+  Label,
+  Value,
 };
