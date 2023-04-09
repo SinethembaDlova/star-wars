@@ -1,17 +1,25 @@
+import { Row } from '../../globalStyles';
 import styled from 'styled-components';
 
 const AccordionContainer = styled.div`
   border: 1px solid #ccc;
   border-radius: 4px;
   overflow: hidden;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 `;
 
-const AccordionHeader = styled.div`
+const AccordionHeader = styled(Row)`
+  justify-content: space-between;
+  align-items: center;
   background-color: #274064;
   color: white;
+  text-transform: uppercase;
   padding: 20px;
   cursor: pointer;
+
+  i {
+    font-size: 2rem;
+  }
 `;
 
 const AccordionContent = styled.div`

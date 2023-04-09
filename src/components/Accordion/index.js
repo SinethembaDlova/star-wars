@@ -19,7 +19,7 @@ const Accordion = ({ heading, content }) => {
     <AccordionContainer>
       <AccordionHeader onClick={toggleAccordion}>
         <strong>{heading}</strong>
-        {isExpanded ? ' -' : ' +'}
+        <i className="material-icons">{isExpanded ? 'expand_less' : 'expand_more'}</i>
       </AccordionHeader>
       {isExpanded && (
         <AccordionContent>
