@@ -53,11 +53,11 @@ const MovieDetails = ({ details }) => {
         <span>{release_date}</span>
       </div>
       <ListWrapper>
-        <List heading="Characters" listData={characters} />
         <List heading="Planets" listData={planets} />
         <List heading="Species" listData={species} />
-        <List heading="Starships" listData={starships} />
         <List heading="Vehicles" listData={vehicles} />
+        <List heading="Starships" listData={starships} />
+        <List heading="Characters" listData={characters} />
       </ListWrapper>
     </MovieDetailsContainer>
   );
