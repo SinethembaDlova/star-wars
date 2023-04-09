@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Container, Heading } from '../../globalStyles';
+import { Container } from '../../globalStyles';
 import { MoviesContext } from 'context/movies';
+import MovieDetails from 'components/MovieDetails';
 
 const Movie = () => {
   const { getMovieDetails, isLoading } = useContext(MoviesContext);
@@ -31,7 +32,7 @@ const Movie = () => {
 
   return (
     <Container>
-      <Heading>{movieDetails.title}</Heading>
+      <MovieDetails details={movieDetails} />
     </Container>
   );
 };
