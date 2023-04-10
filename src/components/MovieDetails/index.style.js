@@ -37,7 +37,7 @@ const Description = styled.p`
   font-size: clamp(1rem, 1.3vw, 1.5rem);
   line-height: 25px;
   letter-spacing: 2px;
-  padding-right: 20px;
+  padding-right: 25px;
   margin-bottom: 10px;
 `;
 
@@ -50,11 +50,11 @@ const Team = styled.p`
 `;
 
 const ListWrapper = styled(Col)`
-  margin-top: 1rem;
   grid-gap: 2rem;
+  background: #ffffffffffff;
 `;
 
-const FooterContainer = styled(Row)`
+const DateContainer = styled(Row)`
   align-items: center;
   border-top: 1px solid #9d9d9d;
   padding-top: 1.5rem;
@@ -62,18 +62,21 @@ const FooterContainer = styled(Row)`
   margin-top: 1.5rem;
 `;
 
-const FooterItem = styled(Row)``;
+const DateItem = styled(Row)`
+  background: #474f5f;
+  color: #ffffff;
+  padding: 15px;
+  align-items: center;
+`;
 
-const Label = styled.h4`
+const Label = styled.p`
   font-family: inherit;
-  font-size: 1.8rem;
-  color: #9d9d9d;
-  margin-bottom: 1.5rem;
+  font-size: clamp(0.8rem, 1.2vw, 1.5rem);
 `;
 
 const Value = styled.span`
   font-family: inherit;
-  font-size: 1.5rem;
+  font-size: clamp(0.8rem, 1.2vw, 1.5rem);
   margin-left: 0.5rem;
 `;
 
@@ -85,8 +88,8 @@ export {
   Description,
   Team,
   ListWrapper,
-  FooterContainer,
-  FooterItem,
+  DateContainer,
+  DateItem,
   Label,
   Value,
 };

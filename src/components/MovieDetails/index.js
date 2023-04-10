@@ -8,8 +8,8 @@ import {
   Description,
   Team,
   ListWrapper,
-  FooterContainer,
-  FooterItem,
+  DateContainer,
+  DateItem,
   Label,
   Value,
 } from './index.style';
@@ -40,22 +40,24 @@ const MovieDetails = ({ details }) => {
           <span>Back</span>
         </BackIcon>
       </BackContainer>
+      <Row>
+        <Title>{title}</Title>
+      </Row>
       <Row justify="center">
         <Col width="70%">
-          <Title>{title}</Title>
           <Team>Director by: {director}</Team>
           <Team>Producer by: {producer}</Team>
           <Description>{opening_crawl}</Description>
-          <FooterContainer>
-            <FooterItem width="50%">
+          <DateContainer>
+            <DateItem width="50%">
               <Label>Created: </Label>
               <Value>{created}</Value>
-            </FooterItem>
-            <FooterItem width="50%">
+            </DateItem>
+            <DateItem width="50%">
               <Label>Release date: </Label>
               <Value>{release_date}</Value>
-            </FooterItem>
-          </FooterContainer>
+            </DateItem>
+          </DateContainer>
         </Col>
         <Col width="30%">
           <ListWrapper>
