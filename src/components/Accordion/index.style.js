@@ -24,9 +24,9 @@ const AccordionHeader = styled(Row)`
 
 const AccordionContent = styled.div`
   li {
-    // margin-bottom: 10px;
+    margin-bottom: 10px;
     text-align: center;
-    padding: 16px 16px;
+    padding: 16px;
     border-bottom: 1px solid #dddddd;
     &:nth-of-type(even) {
       background-color: #f3f3f3;
@@ -46,10 +46,9 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-  margin: 1rem 0 auto;
   text-align: center;
-  font-size: 0.9rem;
-  line-height: 0.5;
+  font-size: 1rem;
+  line-height: 0.5px;
   letter-spacing: 0.5px;
   color: #626881;
 

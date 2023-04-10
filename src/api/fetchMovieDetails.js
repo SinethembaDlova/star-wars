@@ -43,6 +43,7 @@ const fetchMovieDetails = async (id) => {
     director: movie?.director,
     producer: movie?.producer,
     created: dateOnly(movie?.created),
+    edited: dateOnly(movie?.edited),
     release_date: movie?.release_date,
     planets,
     species,

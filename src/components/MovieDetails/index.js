@@ -24,6 +24,7 @@ const MovieDetails = ({ details }) => {
     director,
     producer,
     created,
+    edited,
     release_date,
     characters,
     planets,
@@ -52,6 +53,10 @@ const MovieDetails = ({ details }) => {
             <DateItem width="50%">
               <Label>Created: </Label>
               <Value>{created}</Value>
+            </DateItem>
+            <DateItem width="50%">
+              <Label>Edited: </Label>
+              <Value>{edited}</Value>
             </DateItem>
             <DateItem width="50%">
               <Label>Release date: </Label>
