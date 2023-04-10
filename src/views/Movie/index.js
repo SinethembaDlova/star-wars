@@ -1,64 +1,35 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { Container } from '../../globalStyles';
-import { MoviesContext } from 'context/movies';
 import MovieDetails from 'components/MovieDetails';
 import Loader from 'components/Loader';
+import fetchMovieDetails from 'api/fetchMovieDetails';
+import {
+  fetchMovieDetailsBegin,
+  fetchMovieDetailsSuccess,
+  fetchMovieDetailsFailure,
+} from '../../redux/reducer/movieDetailsSlice';
 
 const Movie = () => {
-  const { getMovieDetails, isLoading } = useContext(MoviesContext);
+  const dispatch = useDispatch();
+  const { movieDetails, isLoading } = useSelector((state) => state.movieDetails);
   const id = useParams().id;
-  const [movieDetails, setMovieDetails] = useState({
-    title: '',
-    opening_crawl: '',
-    director: '',
-    producer: '',
-    created: '',
-    edited: '',
-    release_date: '',
-    characters: [],
-    planets: [],
-    species: [],
-    starships: [],
-    vehicles: [],
-  });
 
   useEffect(() => {
-    const fetchMovieDetails = async () => {
-      if (id) {
-        try {
-          const movie = await getMovieDetails(id);
-          setMovieDetails({
-            ...movieDetails,
-            title: movie?.title,
-            opening_crawl: movie?.opening_crawl,
-            director: movie?.director,
-            producer: movie?.producer,
-            created: movie?.created,
-            edited: movie?.edited,
-            release_date: movie?.release_date,
-            planets: movie?.planets,
-            species: movie?.species,
-            vehicles: movie?.vehicles,
-            starships: movie?.starships,
-            characters: movie?.characters,
-          });
-        } catch (error) {
-          console.error('Failed to fetch movie details:', error);
-        }
+    (async () => {
+      dispatch(fetchMovieDetailsBegin());
+      try {
+        const singlemovie = await fetchMovieDetails(id);
+        dispatch(fetchMovieDetailsSuccess(singlemovie));
+      } catch (error) {
+        console.error(error);
+        dispatch(fetchMovieDetailsFailure());
       }
-    };
+    })();
+  }, [dispatch, id]);
 
-    fetchMovieDetails();
-  }, [id]);
-
-  if (isLoading) return <Loader />;
-
-  return (
-    <Container>
-      <MovieDetails details={movieDetails} />
-    </Container>
-  );
+  return <Container>{isLoading ? <Loader /> : <MovieDetails details={movieDetails} />} </Container>;
 };
 
 export default Movie;
