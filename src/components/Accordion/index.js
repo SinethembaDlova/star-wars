@@ -21,12 +21,14 @@ const Accordion = ({ heading, content }) => {
         <strong>{heading}</strong>
         <i className="material-icons">{isExpanded ? 'expand_less' : 'expand_more'}</i>
       </AccordionHeader>
-      {isExpanded && (
+      {isExpanded && content && (
         <AccordionContent>
           <List>
-            {content.map((item, index) => (
-              <ListItem key={index}>{item}</ListItem>
-            ))}
+            {content?.length > 0 ? (
+              content.map((item, index) => <ListItem key={index}>{item}</ListItem>)
+            ) : (
+              <ListItem>List Is Empty</ListItem>
+            )}
           </List>
         </AccordionContent>
       )}
@@ -35,7 +37,7 @@ const Accordion = ({ heading, content }) => {
 };
 Accordion.propTypes = {
   heading: PropTypes.string.isRequired,
-  content: PropTypes.array.isRequired,
+  content: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default Accordion;

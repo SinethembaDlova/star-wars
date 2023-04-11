@@ -10,13 +10,15 @@ const makeRequest = async (method, path = API_URL) => {
   }
 };
 
-const multipleRequests = async (urlList) => {
-  urlList.map(async (url) => {
-    const characterResponse = await makeRequest('get', url);
-    return characterResponse?.data;
+const multipleEntityRequests = async (movie, entityType) => {
+  const relatedEntityRequests = movie?.[entityType]?.map(async (relatedEntityUrl) => {
+    const relatedEntityResponse = await makeRequest('get', relatedEntityUrl);
+    return relatedEntityResponse?.data?.name;
   });
+  const relatedEntities = await Promise.all(relatedEntityRequests);
+  return { [entityType]: relatedEntities };
 };
 
 const getId = (url) => url.split('/').filter(Boolean).pop();
 
-export { makeRequest, multipleRequests, getId };
+export { makeRequest, multipleEntityRequests, getId };

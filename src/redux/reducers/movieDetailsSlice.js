@@ -3,7 +3,20 @@ import { createSlice } from '@reduxjs/toolkit';
 const movieDetailsSlice = createSlice({
   name: 'movieDetails',
   initialState: {
-    movieDetails: {},
+    movieDetails: {
+      title: '',
+      opening_crawl: '',
+      director: '',
+      producer: '',
+      created: '',
+      edited: '',
+      release_date: '',
+      characters: [],
+      planets: [],
+      species: [],
+      starships: [],
+      vehicles: [],
+    },
     isLoading: false,
   },
   reducers: {

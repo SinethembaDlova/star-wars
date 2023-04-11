@@ -9,7 +9,7 @@ import {
   fetchMovieDetailsBegin,
   fetchMovieDetailsSuccess,
   fetchMovieDetailsFailure,
-} from '../../redux/reducer/movieDetailsSlice';
+} from '../../redux/reducers/movieDetailsSlice';
 
 const Movie = () => {
   const dispatch = useDispatch();

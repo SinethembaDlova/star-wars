@@ -1,4 +1,4 @@
-import { makeRequest } from '../utils/api';
+import { makeRequest, multipleEntityRequests } from '../utils/api';
 import API_URL from '../constants/api';
 import dateOnly from '../utils/date';
 
@@ -7,35 +7,10 @@ const fetchMovieDetails = async (id) => {
   const movieResponse = await makeRequest('get', movieUrl);
   const movie = movieResponse?.data;
 
-  const characterRequests = movie?.characters?.map(async (characterUrl) => {
-    const characterResponse = await makeRequest('get', characterUrl);
-    return characterResponse?.data?.name;
-  });
-  const characters = await Promise.all(characterRequests);
-
-  const planetsRequests = movie?.planets?.map(async (planetsUrl) => {
-    const planetsResponse = await makeRequest('get', planetsUrl);
-    return planetsResponse?.data?.name;
-  });
-  const planets = await Promise.all(planetsRequests);
-
-  const speciesRequests = movie?.species?.map(async (speciesUrl) => {
-    const speciesResponse = await makeRequest('get', speciesUrl);
-    return speciesResponse?.data?.name;
-  });
-  const species = await Promise.all(speciesRequests);
-
-  const starshipsRequests = movie?.starships?.map(async (starshipsUrl) => {
-    const starshipsResponse = await makeRequest('get', starshipsUrl);
-    return starshipsResponse?.data?.name;
-  });
-  const starships = await Promise.all(starshipsRequests);
-
-  const vehicleRequests = movie?.vehicles?.map(async (vehiclesUrl) => {
-    const vehiclesResponse = await makeRequest('get', vehiclesUrl);
-    return vehiclesResponse?.data?.name;
-  });
-  const vehicles = await Promise.all(vehicleRequests);
+  const entityTypes = ['characters', 'planets', 'species', 'starships', 'vehicles'];
+  const relatedEntityData = await Promise.all(
+    entityTypes.map((entityType) => multipleEntityRequests(movie, entityType))
+  );
 
   const movieDetails = {
     title: movie?.title,
@@ -45,16 +20,12 @@ const fetchMovieDetails = async (id) => {
     created: dateOnly(movie?.created),
     edited: dateOnly(movie?.edited),
     release_date: movie?.release_date,
-    planets,
-    species,
-    vehicles,
-    starships,
-    characters,
   };
-
-  console.log('movieDetails: ', movieDetails);
-
-  return movieDetails;
+  const movieDetailsWithEntities = {
+    ...movieDetails,
+    ...Object.assign({}, ...relatedEntityData),
+  };
+  return movieDetailsWithEntities;
 };
 
 export default fetchMovieDetails;
