@@ -10,6 +10,8 @@
     - [Styled Components](https://www.styled-components.com/) (writes custom CSS in javascript).
     - [ReactStrap](https://reactstrap.github.io/?path=/docs/home-installation--page) (External react component library).
 
+Click the link to play with the application: https://star-wars-phi.vercel.app
+
 ## Get started
 
 clone the repository into you machine using this command below (And please make sure you are running the master branch):
