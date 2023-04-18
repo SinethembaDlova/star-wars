@@ -67,6 +67,7 @@ export const Col = styled.div`
   height: ${({ height }) => (height ? height : 'auto')};
   min-height: ${({ minHeight }) => (minHeight ? minHeight : 'auto')};
   max-height: ${({ maxHeight }) => (maxHeight ? maxHeight : 'auto')};
+  background: ${({ background }) => (background ? background : 'auto')};
 `;
 
 export default GlobalStyle;
