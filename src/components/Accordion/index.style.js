@@ -23,6 +23,8 @@ const AccordionHeader = styled(Row)`
 `;
 
 const AccordionContent = styled.div`
+  max-height: 300px;
+  overflow-y: auto;
   li {
     margin-bottom: 10px;
     text-align: center;
