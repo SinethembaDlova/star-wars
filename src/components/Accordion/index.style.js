@@ -14,7 +14,7 @@ const AccordionHeader = styled(Row)`
   background-color: #274064;
   color: white;
   text-transform: uppercase;
-  padding: 18px;
+  padding: 10px;
   cursor: pointer;
 
   i {
