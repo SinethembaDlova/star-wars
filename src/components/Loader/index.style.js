@@ -10,11 +10,11 @@ const LoaderOverlay = styled.div`
 
 const LoaderContainer = styled.div`
   display: inline-block;
-  width: 50px;
-  height: 50px;
-  border: 3px solid rgba(195, 195, 195, 0.6);
+  width: 100px;
+  height: 100px;
+  border: 10px solid rgba(195, 195, 195, 0.6);
   border-radius: 50%;
-  border-top-color: #636767;
+  border-top-color: #274064;
   animation: spin 1s ease-in-out infinite;
   -webkit-animation: spin 1s ease-in-out infinite;
   @keyframes spin {

@@ -25,7 +25,7 @@ export const Heading = styled.h2`
   margin: ${({ margin }) => (margin ? margin : '')};
   margin-bottom: ${({ mb }) => (mb ? mb : '50px')};
   margin-top: ${({ mt }) => (mt ? mt : '')};
-  color: '#274064';
+  color: #274064;
   letter-spacing: 0.1rem;
   line-height: 1.06;
   width: ${({ width }) => (width ? width : '100%')};
