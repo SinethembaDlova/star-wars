@@ -41,11 +41,9 @@ const MovieDetails = ({ details }) => {
           <span>Back</span>
         </BackIcon>
       </BackContainer>
-      <Row>
-        <Title>{title}</Title>
-      </Row>
       <Row justify="center">
         <Col width="70%">
+          <Title>{title}</Title>
           <Team>Director by: {director}</Team>
           <Team>Producer by: {producer}</Team>
           <Description>{opening_crawl}</Description>
