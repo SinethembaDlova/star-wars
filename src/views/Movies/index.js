@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Container, Heading, Row } from '../../globalStyles';
-import { Link } from 'react-router-dom';
-import Table from '../../components/Table';
+// import { Link } from 'react-router-dom';
+// import Table from '../../components/Table';
 import Loader from 'components/Loader';
 import fetchAllMovies from 'api/fetchAllMovies';
 import {
@@ -10,19 +10,20 @@ import {
   fetchMoviesSuccess,
   fetchMoviesFailure,
 } from '../../redux/reducers/moviesSlice';
+import MovieCard from 'components/MovieCard';
 
 const Movies = () => {
   const dispatch = useDispatch();
   const { movies, isLoading } = useSelector((state) => state.movies);
 
-  const moviesData = (movies) =>
-    movies.map((movie) => ({
-      title: movie.title,
-      director: movie.director,
-      producer: movie.producer,
-      release_date: movie.release_date,
-      actions: <Link to={`/movies/${movie.id}`}>View Movie Details</Link>,
-    }));
+  // const moviesData = (movies) =>
+  //   movies.map((movie) => ({
+  //     title: movie.title,
+  //     director: movie.director,
+  //     producer: movie.producer,
+  //     release_date: movie.release_date,
+  //     actions: <Link to={`/movies/${movie.id}`}>View Movie Details</Link>,
+  //   }));
 
   useEffect(() => {
     (async () => {
@@ -44,6 +45,10 @@ const Movies = () => {
       ) : (
         <>
           <Heading>Movies</Heading>
+          <Row wrap="wrap" justify="space-between">
+            {movies.length > 0 && movies.map((index) => <MovieCard key={index} />)}
+          </Row>
+          {/* <Heading>Movies</Heading>
           <Row justify="center">
             {movies.length > 0 && (
               <Table
@@ -51,7 +56,7 @@ const Movies = () => {
                 data={moviesData(movies)}
               />
             )}
-          </Row>
+          </Row> */}
         </>
       )}
     </Container>
