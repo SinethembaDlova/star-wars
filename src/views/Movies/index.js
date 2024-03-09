@@ -46,7 +46,8 @@ const Movies = () => {
         <>
           <Heading>Movies</Heading>
           <Row wrap="wrap" justify="space-between">
-            {movies.length > 0 && movies.map((index) => <MovieCard key={index} />)}
+            {movies.length > 0 &&
+              movies.map((movie, index) => <MovieCard key={index} movie={movie} />)}
           </Row>
           {/* <Heading>Movies</Heading>
           <Row justify="center">

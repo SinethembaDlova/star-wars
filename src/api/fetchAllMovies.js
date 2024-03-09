@@ -6,9 +6,9 @@ const fetchAllMovies = async () => {
   const updatedMovies = movies.map((movie) => ({
     id: getId(movie.url),
     title: movie.title,
-    director: movie.director,
     producer: movie.producer,
     release_date: movie.release_date,
+    opening_crawl: movie.opening_crawl,
   }));
   return updatedMovies;
 };
