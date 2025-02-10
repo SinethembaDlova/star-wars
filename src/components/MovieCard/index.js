@@ -3,37 +3,57 @@ import PropTypes from 'prop-types';
 import {
   CardWrapper,
   CardImageOverlay,
-  CardImage,
+  CardHeader,
   CardTitle,
   CardDate,
   CardDescription,
   CardButton,
   CardContainer,
 } from './index.style';
+import movieCoverOne from '../../assets/images/movie_cover_1.png';
+import movieCoverTwo from '../../assets/images/movie_cover_2.png';
+import movieCoverThree from '../../assets/images/movie_cover_3.png';
+import movieCoverFour from '../../assets/images/movie_cover_4.png';
+import movieCoverFive from '../../assets/images/movie_cover_5.png';
+import movieCoverSix from '../../assets/images/movie_cover_6.png';
+
 
 const MovieCard = ({ movie }) => {
-  const { title, opening_crawl, release_date, producer } = movie;
-  console.log(release_date);
-  const imgUrl =
-    'https://images.unsplash.com/photo-1526818614391-390bc085968b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80';
+  const { title, opening_crawl, producer } = movie;
+
+  const movieBackgrounds = {
+    'A New Hope': movieCoverOne,
+    'The Empire Strikes Back': movieCoverTwo,
+    'Return of the Jedi': movieCoverThree,
+    'The Phantom Menace': movieCoverFour,
+    'Attack of the Clones': movieCoverFive,
+    'Revenge of the Sith': movieCoverSix,
+  };
+  const fallBack = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgAB/1h1vAAAAABJRU5ErkJggg=='; // Fallback image
+
 
   return (
     <CardContainer>
-      <CardWrapper>
+      <CardWrapper backgroundImage={movieBackgrounds[title] || fallBack}>
         <CardImageOverlay>
-          <CardTitle>{title}</CardTitle>
-          <CardDate>{producer}</CardDate>
+          <CardHeader>
+            <CardTitle>{title}</CardTitle>
+            <CardDate>By: {producer}</CardDate>
+          </CardHeader>
           <CardDescription>{opening_crawl}</CardDescription>
+          <CardButton>View Movie</CardButton>
         </CardImageOverlay>
-        <CardImage src={imgUrl} alt="Movie Poster" />
       </CardWrapper>
-      <CardButton>View Movie</CardButton>
     </CardContainer>
   );
 };
 
 MovieCard.propTypes = {
-  movie: PropTypes.object.isRequired,
+  movie: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    opening_crawl: PropTypes.string.isRequired,
+    producer: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default MovieCard;
