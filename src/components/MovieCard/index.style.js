@@ -88,8 +88,8 @@ export const CardDescription = styled.p`
 `;
 
 export const CardButton = styled.button`
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #E50914;
+  color: #274064;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 4px;

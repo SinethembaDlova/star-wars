@@ -11,7 +11,7 @@ function App() {
     <Router>
       <GlobalStyle />
       <Navbar />
-      <Sidebar />
+      {/* <Sidebar /> */}
       <Routes>
         <Route exact path="/" element={<Navigate to="/movies" replace />} />
         <Route exact path="/movies" element={<Movies />} />

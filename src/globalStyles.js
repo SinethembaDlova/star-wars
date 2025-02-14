@@ -10,14 +10,10 @@ const GlobalStyle = createGlobalStyle`
 }`;
 
 export const Container = styled.div`
-  margin: 60px auto auto 180px;
+  margin: auto;
   padding: 50px;
   min-height: calc(100vh - 60px);
-  background: #f0f2f5;
-  @media only screen and (max-width: 600px) {
-    margin: 0 auto auto 68px;
-    padding: 65px;
-  }
+  background: #20101C;
 `;
 
 export const Heading = styled.h2`
