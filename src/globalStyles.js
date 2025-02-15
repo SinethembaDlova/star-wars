@@ -1,6 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
-// Global styles
 const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
@@ -27,12 +26,12 @@ export const Container = styled.div`
 `;
 
 export const Heading = styled.h2`
-  font-size: clamp(1.3rem, 13vw, 3.1rem);
+  font-size: clamp(20px, 13vw, 50px);
   margin: ${({ margin }) => margin || ''};
   margin-bottom: ${({ mb }) => mb || '50px'};
   margin-top: ${({ mt }) => mt || ''};
   color: #274064;
-  letter-spacing: 0.1rem;
+  letter-spacing: 2px;
   line-height: 1.06;
   width: ${({ width }) => width || '100%'};
 `;
