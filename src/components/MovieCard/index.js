@@ -5,7 +5,7 @@ import {
   CardImageOverlay,
   CardHeader,
   CardTitle,
-  CardDate,
+  CardProducer,
   CardDescription,
   CardButton,
   CardContainer,
@@ -38,7 +38,7 @@ const MovieCard = ({ movie }) => {
         <CardImageOverlay>
           <CardHeader>
             <CardTitle>{title}</CardTitle>
-            <CardDate>By: {producer}</CardDate>
+            <CardProducer>By: {producer}</CardProducer>
           </CardHeader>
           <CardDescription>{opening_crawl}</CardDescription>
           <CardButton>View Movie</CardButton>

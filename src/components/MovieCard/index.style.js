@@ -63,7 +63,7 @@ export const CardTitle = styled.h3`
   }
 `;
 
-export const CardDate = styled.p`
+export const CardProducer = styled.p`
   font-size: 13px;
   margin-bottom: 8px;
 
