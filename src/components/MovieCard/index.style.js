@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const CardContainer = styled.div`
   position: relative;
-  width: calc(33.33% - 2rem);
-  margin: 1rem;
+  width: calc(33.33% - 32px);
+  margin: 16px;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -14,11 +14,11 @@ export const CardContainer = styled.div`
   }
 
   @media (max-width: 1024px) {
-    width: calc(50% - 2rem);
+    width: calc(50% - 32px);
   }
 
   @media (max-width: 768px) {
-    width: calc(100% - 2rem);
+    width: calc(100% - 32px);
   }
 `;
 
@@ -44,38 +44,38 @@ export const CardImageOverlay = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1.5rem;
+  padding: 24px;
   color: white;
 `;
 
 export const CardHeader = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 3px;
 `;
 
 export const CardTitle = styled.h3`
-  font-size: 1.8rem;
+  font-size: 29px;
   margin-bottom: 0;
 
   @media (max-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
 `;
 
 export const CardDate = styled.p`
-  font-size: 0.8rem;
-  margin-bottom: 0.5rem;
+  font-size: 13px;
+  margin-bottom: 8px;
 
   @media (max-width: 768px) {
-    font-size: 0.7rem;
+    font-size: 11px;
   }
 `;
 
 export const CardDescription = styled.p`
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.5;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
   display: -webkit-box;
   -webkit-line-clamp: none;
   -webkit-box-orient: vertical;
@@ -83,24 +83,26 @@ export const CardDescription = styled.p`
   text-overflow: ellipsis;
 
   @media (max-width: 768px) {
-    font-size: 0.9rem;
+    font-size: 14px;
   }
 `;
 
 export const CardButton = styled.button`
   background-color: #E50914;
-  color: #274064;
-  padding: 0.5rem 1rem;
+  color: #ffffff;
+  padding: 8px 16px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-weight: 600;
 
   &:hover {
     background-color: #dddddd;
+    color: #274064;
   }
 
   @media (max-width: 768px) {
-    padding: 0.4rem 0.8rem;
+    padding: 6px 13px;
   }
 `;

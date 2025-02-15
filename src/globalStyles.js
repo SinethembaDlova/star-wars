@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     background-color: #20101C;
+    color: #ffffff;
   }
 `;
 
@@ -18,7 +19,6 @@ export const Container = styled.div`
   padding: 80px;
   padding-top: calc(80px + 20px);
   min-height: calc(100vh - 80px);
-  background: #20101C;
 
   @media (max-width: 768px) {
     padding-top: calc(60px + 20px);
@@ -28,9 +28,8 @@ export const Container = styled.div`
 export const Heading = styled.h2`
   font-size: clamp(20px, 13vw, 50px);
   margin: ${({ margin }) => margin || ''};
-  margin-bottom: ${({ mb }) => mb || '50px'};
+  margin-bottom: ${({ mb }) => mb || '20px'};
   margin-top: ${({ mt }) => mt || ''};
-  color: #274064;
   letter-spacing: 2px;
   line-height: 1.06;
   width: ${({ width }) => width || '100%'};
