@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const CardContainer = styled.div`
   position: relative;
@@ -87,6 +88,12 @@ const CardDescription = styled.p`
   }
 `;
 
+ const StyledLink = styled(Link)`
+  text-decoration: none;
+  display: block;
+  width: 100%;
+`;
+
 const CardButton = styled.button`
   background-color: #E50914;
   color: #ffffff;
@@ -96,6 +103,8 @@ const CardButton = styled.button`
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-weight: 600;
+  width: 100%;
+
 
   &:hover {
     background-color: #dddddd;
@@ -108,12 +117,13 @@ const CardButton = styled.button`
 `;
 
 export {
+  CardContainer,
   CardWrapper,
   CardImageOverlay,
   CardHeader,
   CardTitle,
   CardProducer,
   CardDescription,
-  CardButton,
-  CardContainer,
+  StyledLink,
+  CardButton
 };

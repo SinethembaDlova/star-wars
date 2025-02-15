@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
+  CardContainer,
   CardWrapper,
   CardImageOverlay,
   CardHeader,
   CardTitle,
   CardProducer,
   CardDescription,
-  CardButton,
-  CardContainer,
+  StyledLink,
+  CardButton
 } from './index.style';
 import movieCoverOne from '../../assets/images/movie_cover_1.png';
 import movieCoverTwo from '../../assets/images/movie_cover_2.png';
@@ -41,7 +42,9 @@ const MovieCard = ({ movie }) => {
             <CardProducer>By: {producer}</CardProducer>
           </CardHeader>
           <CardDescription>{opening_crawl}</CardDescription>
-          <CardButton>View Movie</CardButton>
+          <StyledLink to={`/movies/${movie.id}`}>
+            <CardButton>View Movie</CardButton>
+          </StyledLink>
         </CardImageOverlay>
       </CardWrapper>
     </CardContainer>
