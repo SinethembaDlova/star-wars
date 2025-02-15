@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CardContainer = styled.div`
+const CardContainer = styled.div`
   position: relative;
   width: calc(33.33% - 32px);
   margin: 16px;
@@ -22,7 +22,7 @@ export const CardContainer = styled.div`
   }
 `;
 
-export const CardWrapper = styled.div`
+const CardWrapper = styled.div`
   position: relative;
   width: 100%;
   min-height: 400px;
@@ -34,7 +34,7 @@ export const CardWrapper = styled.div`
   align-items: flex-end;
 `;
 
-export const CardImageOverlay = styled.div`
+const CardImageOverlay = styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -48,13 +48,13 @@ export const CardImageOverlay = styled.div`
   color: white;
 `;
 
-export const CardHeader = styled.div`
+const CardHeader = styled.div`
   display: flex;
   flex-direction: column;
   gap: 3px;
 `;
 
-export const CardTitle = styled.h3`
+const CardTitle = styled.h3`
   font-size: 29px;
   margin-bottom: 0;
 
@@ -63,7 +63,7 @@ export const CardTitle = styled.h3`
   }
 `;
 
-export const CardProducer = styled.p`
+const CardProducer = styled.p`
   font-size: 13px;
   margin-bottom: 8px;
 
@@ -72,7 +72,7 @@ export const CardProducer = styled.p`
   }
 `;
 
-export const CardDescription = styled.p`
+const CardDescription = styled.p`
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 16px;
@@ -87,7 +87,7 @@ export const CardDescription = styled.p`
   }
 `;
 
-export const CardButton = styled.button`
+const CardButton = styled.button`
   background-color: #E50914;
   color: #ffffff;
   padding: 8px 16px;
@@ -106,3 +106,14 @@ export const CardButton = styled.button`
     padding: 6px 13px;
   }
 `;
+
+export {
+  CardWrapper,
+  CardImageOverlay,
+  CardHeader,
+  CardTitle,
+  CardProducer,
+  CardDescription,
+  CardButton,
+  CardContainer,
+};
