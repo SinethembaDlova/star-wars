@@ -10,21 +10,16 @@ const LoaderOverlay = styled.div`
 
 const LoaderContainer = styled.div`
   display: inline-block;
-  width: 100px;
-  height: 100px;
-  border: 10px solid rgba(195, 195, 195, 0.6);
+  width: 180px;
+  height: 180px;
+  border: 18px solid #E50914; // Primary color
   border-radius: 50%;
-  border-top-color: #274064;
+  border-top-color: #274064; // Secondary color
   animation: spin 1s ease-in-out infinite;
-  -webkit-animation: spin 1s ease-in-out infinite;
+
   @keyframes spin {
     to {
-      -webkit-transform: rotate(360deg);
-    }
-  }
-  @-webkit-keyframes spin {
-    to {
-      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
     }
   }
 `;
