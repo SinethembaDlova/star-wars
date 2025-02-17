@@ -62,7 +62,7 @@ const MovieDetails = ({ details }) => {
             </DateItem>
           </DateContainer>
         </Col>
-        <Col width="30%" background="#ffffff" padding="20px">
+        <Col width="30%" background="#ffffff" padding="20px" ml="20px">
           <ListWrapper>
             <Accordion heading="Characters" content={characters} />
             <Accordion heading="Species" content={species} />
