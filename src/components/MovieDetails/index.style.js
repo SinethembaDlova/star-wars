@@ -50,7 +50,7 @@ const Team = styled.p`
 
 const ListWrapper = styled(Col)`
   gap: 20px;
-  background: #fffffff;
+  background: #ffffff;
 `;
 
 const DateContainer = styled(Row)`
