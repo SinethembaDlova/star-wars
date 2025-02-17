@@ -42,7 +42,7 @@ const MovieDetails = ({ details }) => {
         </BackIcon>
       </BackContainer>
       <Row justify="center">
-        <Col width="70%">
+        <Col width="70%" mr="20px">
           <Title>{title}</Title>
           <Team>Director by: {director}</Team>
           <Team>Producer by: {producer}</Team>
@@ -62,7 +62,7 @@ const MovieDetails = ({ details }) => {
             </DateItem>
           </DateContainer>
         </Col>
-        <Col width="30%" background="#ffffff" padding="20px" ml="20px">
+        <Col width="30%" background="#ffffff" padding="20px">
           <ListWrapper>
             <Accordion heading="Characters" content={characters} />
             <Accordion heading="Species" content={species} />
