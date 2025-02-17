@@ -6,6 +6,11 @@ const MovieDetailsContainer = styled.div`
   background-color: #20101C;
   color: #ffffff;
   padding: 20px;
+
+  @media (max-width: 768px) {
+    padding: 10px;
+
+  }
 `;
 
 const BackContainer = styled(Row)`
@@ -61,6 +66,8 @@ const DateContainer = styled(Row)`
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 10px;
+    margin-bottom: 20px;
+
   }
 `;
 
