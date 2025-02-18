@@ -12,7 +12,7 @@ const LoaderContainer = styled.div`
   display: inline-block;
   width: 180px;
   height: 180px;
-  border: 18px solid #E50914; // Primary color
+  border: 18px solid #e50914; // Primary color
   border-radius: 50%;
   border-top-color: #274064; // Secondary color
   animation: spin 1s ease-in-out infinite;

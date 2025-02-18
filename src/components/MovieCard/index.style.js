@@ -88,14 +88,14 @@ const CardDescription = styled.p`
   }
 `;
 
- const StyledLink = styled(Link)`
+const StyledLink = styled(Link)`
   text-decoration: none;
   display: block;
   width: 100%;
 `;
 
 const CardButton = styled.button`
-  background-color: #E50914;
+  background-color: #e50914;
   color: #ffffff;
   padding: 8px 16px;
   border: none;
@@ -104,7 +104,6 @@ const CardButton = styled.button`
   transition: background-color 0.3s ease;
   font-weight: 600;
   width: 100%;
-
 
   &:hover {
     background-color: #dddddd;
@@ -125,5 +124,5 @@ export {
   CardProducer,
   CardDescription,
   StyledLink,
-  CardButton
+  CardButton,
 };

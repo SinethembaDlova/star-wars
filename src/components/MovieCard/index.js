@@ -9,7 +9,7 @@ import {
   CardProducer,
   CardDescription,
   StyledLink,
-  CardButton
+  CardButton,
 } from './index.style';
 import movieCoverOne from '../../assets/images/movie_cover_1.png';
 import movieCoverTwo from '../../assets/images/movie_cover_2.png';
@@ -17,7 +17,6 @@ import movieCoverThree from '../../assets/images/movie_cover_3.png';
 import movieCoverFour from '../../assets/images/movie_cover_4.png';
 import movieCoverFive from '../../assets/images/movie_cover_5.png';
 import movieCoverSix from '../../assets/images/movie_cover_6.png';
-
 
 const MovieCard = ({ movie }) => {
   const { title, opening_crawl, producer } = movie;
@@ -30,8 +29,8 @@ const MovieCard = ({ movie }) => {
     'Attack of the Clones': movieCoverFive,
     'Revenge of the Sith': movieCoverSix,
   };
-  const fallBack = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgAB/1h1vAAAAABJRU5ErkJggg=='; // Fallback image
-
+  const fallBack =
+    'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgAB/1h1vAAAAABJRU5ErkJggg=='; // Fallback image
 
   return (
     <CardContainer>

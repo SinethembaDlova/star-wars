@@ -3,13 +3,12 @@ import styled from 'styled-components';
 import { Row, Col, Heading } from '../../globalStyles';
 
 const MovieDetailsContainer = styled.div`
-  background-color: #20101C;
+  background-color: #20101c;
   color: #ffffff;
   padding: 20px;
 
   @media (max-width: 768px) {
     padding: 10px;
-
   }
 `;
 
@@ -102,5 +101,5 @@ export {
   DateContainer,
   DateItem,
   Label,
-  Value
+  Value,
 };

@@ -9,7 +9,7 @@ const AccordionContainer = styled.div`
   background-color: #ffffff;
   width: 100%;
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     width: 100%;
   }
 `;
@@ -28,7 +28,7 @@ const AccordionHeader = styled(Row)`
     font-size: 2rem;
   }
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     padding: 8px;
   }
 `;
