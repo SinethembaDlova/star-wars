@@ -7,12 +7,12 @@ const NavbarContainer = styled.nav`
   top: 0;
   width: 100%;
   height: 80px;
-  background-color: #000000;
+  background-color: #2d1728;
   display: flex;
   align-items: center;
   padding: 0 60px;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 
   @media (max-width: 768px) {
     height: 60px;

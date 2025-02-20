@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Container, Heading, Row } from '../../globalStyles';
+import { Container, Row } from '../../globalStyles';
 import Loader from 'components/Loader';
 import fetchAllMovies from 'api/fetchAllMovies';
 import {
@@ -33,7 +33,6 @@ const Movies = () => {
         <Loader />
       ) : (
         <>
-          <Heading>Movies</Heading>
           <Row wrap="wrap" justify="space-between">
             {movies.length > 0 &&
               movies.map((movie, index) => <MovieCard key={index} movie={movie} />)}
