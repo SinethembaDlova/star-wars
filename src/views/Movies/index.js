@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Container, Heading, Row } from '../../globalStyles';
-// import { Link } from 'react-router-dom';
-// import Table from '../../components/Table';
 import Loader from 'components/Loader';
 import fetchAllMovies from 'api/fetchAllMovies';
 import {
@@ -15,15 +13,6 @@ import MovieCard from 'components/MovieCard';
 const Movies = () => {
   const dispatch = useDispatch();
   const { movies, isLoading } = useSelector((state) => state.movies);
-
-  // const moviesData = (movies) =>
-  //   movies.map((movie) => ({
-  //     title: movie.title,
-  //     director: movie.director,
-  //     producer: movie.producer,
-  //     release_date: movie.release_date,
-  //     actions: <Link to={`/movies/${movie.id}`}>View Movie Details</Link>,
-  //   }));
 
   useEffect(() => {
     (async () => {
@@ -49,15 +38,6 @@ const Movies = () => {
             {movies.length > 0 &&
               movies.map((movie, index) => <MovieCard key={index} movie={movie} />)}
           </Row>
-          {/* <Heading>Movies</Heading>
-          <Row justify="center">
-            {movies.length > 0 && (
-              <Table
-                columnNames={['Title', 'Director', 'Producer', 'Release Date', 'Actions']}
-                data={moviesData(movies)}
-              />
-            )}
-          </Row> */}
         </>
       )}
     </Container>
