@@ -3,9 +3,9 @@ import { NavbarContainer, LogoContainer, StyledLogo } from './index.style';
 
 const Navbar = () => {
   return (
-    <NavbarContainer>
-      <LogoContainer to="/">
-        <StyledLogo />
+    <NavbarContainer aria-label="nav">
+      <LogoContainer to="/" aria-label="home">
+        <StyledLogo aria-label="logo" />
       </LogoContainer>
     </NavbarContainer>
   );
