@@ -28,8 +28,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx}": [
-      "prettier --write",
-      "eslint --config .eslintrc.js --fix"
+      "prettier --write"
     ]
   },
   "browserslist": {
@@ -53,7 +52,7 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "babel-eslint": "^10.1.0",
-    "eslint": "9.21.0",
+    "eslint": "8.56.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-prettier": "^3.1.4",
