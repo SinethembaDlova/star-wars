@@ -33,16 +33,18 @@ const MovieCard = ({ movie }) => {
     'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgAB/1h1vAAAAABJRU5ErkJggg=='; // Fallback image
 
   return (
-    <CardContainer>
-      <CardWrapper backgroundImage={movieBackgrounds[title] || fallBack}>
-        <CardImageOverlay>
-          <CardHeader>
-            <CardTitle>{title}</CardTitle>
-            <CardProducer>By: {producer}</CardProducer>
+    <CardContainer aria-label="movie-card">
+      <CardWrapper
+        backgroundImage={movieBackgrounds[title] || fallBack}
+        aria-label="movie-background">
+        <CardImageOverlay aria-label="movie-overlay">
+          <CardHeader aria-label="movie-header">
+            <CardTitle aria-label="movie-title">{title}</CardTitle>
+            <CardProducer aria-label="movie-producer">By: {producer}</CardProducer>
           </CardHeader>
-          <CardDescription>{opening_crawl}</CardDescription>
-          <StyledLink to={`/movies/${movie.id}`}>
-            <CardButton>View Movie</CardButton>
+          <CardDescription aria-label="movie-description">{opening_crawl}</CardDescription>
+          <StyledLink to={`/movies/${movie.id}`} aria-label={`view-details-${title}`}>
+            <CardButton aria-label="view-button">View Movie</CardButton>
           </StyledLink>
         </CardImageOverlay>
       </CardWrapper>
