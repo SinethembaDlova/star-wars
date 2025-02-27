@@ -3,8 +3,8 @@ import { LoaderContainer, LoaderOverlay } from './index.style';
 
 const Loader = () => {
   return (
-    <LoaderOverlay>
-      <LoaderContainer />
+    <LoaderOverlay aria-label="loading-overlay">
+      <LoaderContainer aria-label="loading-spinner" />
     </LoaderOverlay>
   );
 };
