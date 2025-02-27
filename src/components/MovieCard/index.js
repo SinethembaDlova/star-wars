@@ -52,6 +52,7 @@ const MovieCard = ({ movie }) => {
 
 MovieCard.propTypes = {
   movie: PropTypes.shape({
+    id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     opening_crawl: PropTypes.string.isRequired,
     producer: PropTypes.string.isRequired,

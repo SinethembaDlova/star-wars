@@ -33,10 +33,7 @@ const movieDetailsSlice = createSlice({
   },
 });
 
-export const {
-  fetchMovieDetailsBegin,
-  fetchMovieDetailsSuccess,
-  fetchMovieDetailsFailure,
-} = movieDetailsSlice.actions;
+export const { fetchMovieDetailsBegin, fetchMovieDetailsSuccess, fetchMovieDetailsFailure } =
+  movieDetailsSlice.actions;
 
 export default movieDetailsSlice.reducer;

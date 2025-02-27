@@ -7,7 +7,7 @@ import Navbar from './index';
 
 // Helper to mock window.matchMedia
 const mockMatchMedia = (matches) => {
-  window.matchMedia = jest.fn().mockImplementation(query => ({
+  window.matchMedia = jest.fn().mockImplementation((query) => ({
     matches,
     media: query,
     onchange: null,
@@ -20,18 +20,17 @@ const mockMatchMedia = (matches) => {
 };
 
 describe('Navbar Component', () => {
-
   let navElement;
   let logoLink;
   let logoElement;
-  
+
   beforeEach(() => {
     render(
       <Router>
         <Navbar />
       </Router>
     );
-    
+
     navElement = screen.getByLabelText('nav');
     logoLink = screen.getByLabelText('home');
     logoElement = screen.getByLabelText('logo');
@@ -68,16 +67,16 @@ describe('Navbar Component Responsive Behavior', () => {
   it('applies responsive styles for smaller screens', () => {
     // Mock matchMedia for responsive testing
     mockMatchMedia(true);
-    
+
     render(
       <Router>
         <Navbar />
       </Router>
     );
-    
+
     const navElement = screen.getByLabelText('nav');
     const logoElement = screen.getByLabelText('logo');
-    
+
     expect(navElement).toHaveStyleRule('height', '60px', {
       media: '(max-width: 768px)',
     });
