@@ -26,7 +26,6 @@
     "precommit": "lint-staged",
     "prepare": "husky install"
   },
-  "type": "module",
   "lint-staged": {
     "src/**/*.{js,jsx}": [
       "prettier --write",
