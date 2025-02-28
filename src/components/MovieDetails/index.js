@@ -34,20 +34,20 @@ const MovieDetails = ({ details }) => {
   } = details;
 
   return (
-    <MovieDetailsContainer>
+    <MovieDetailsContainer aria-label="movie-details">
       <BackContainer>
-        <BackIcon to="/movies">
+        <BackIcon to="/movies" aria-label="back-to-movies">
           <i className="material-icons">arrow_back_ios</i>
           <span>Back</span>
         </BackIcon>
       </BackContainer>
       <Row justify="center">
-        <Col width="70%" mr="20px">
+        <Col width="70%" mr="20px" aria-label="movie-info">
           <Title>{title}</Title>
           <Team>Director by: {director}</Team>
           <Team>Producer by: {producer}</Team>
           <Description>{opening_crawl}</Description>
-          <DateContainer>
+          <DateContainer aria-label="movie-dates">
             <DateItem width="50%">
               <Label>Created: </Label>
               <Value>{created}</Value>
@@ -62,13 +62,13 @@ const MovieDetails = ({ details }) => {
             </DateItem>
           </DateContainer>
         </Col>
-        <Col width="30%" background="#ffffff" padding="20px">
+        <Col width="30%" background="#ffffff" padding="20px" aria-label="related-info">
           <ListWrapper>
-            <Accordion heading="Characters" content={characters} />
-            <Accordion heading="Species" content={species} />
-            <Accordion heading="Vehicles" content={vehicles} />
-            <Accordion heading="Starships" content={starships} />
-            <Accordion heading="Planets" content={planets} />
+            <Accordion heading="Characters" content={characters} aria-label="characters-list" />
+            <Accordion heading="Species" content={species} aria-label="species-list" />
+            <Accordion heading="Vehicles" content={vehicles} aria-label="vehicles-list" />
+            <Accordion heading="Starships" content={starships} aria-label="starships-list" />
+            <Accordion heading="Planets" content={planets} aria-label="planets-list" />
           </ListWrapper>
         </Col>
       </Row>
