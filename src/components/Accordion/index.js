@@ -28,7 +28,9 @@ const Accordion = ({ heading, content }) => {
         role="button"
         aria-label={`${heading} accordion ${isExpanded ? 'expanded' : 'collapsed'}`}>
         <span>{heading}</span>
-        <i aria-hidden="true">{isExpanded ? 'expand_less' : 'expand_more'}</i>
+        <i className="material-icons" aria-hidden="true">
+          {isExpanded ? 'expand_less' : 'expand_more'}
+        </i>
       </AccordionHeader>
 
       {isExpanded && content && (

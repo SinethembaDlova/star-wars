@@ -8,7 +8,6 @@
     - [React](https://reactjs.org/) (javascript library for building user interfaces or UI components).
     - [Axios](https://www.npmjs.com/package/axios) (API quiries).
     - [Styled Components](https://www.styled-components.com/) (writes custom CSS in javascript).
-    - [ReactStrap](https://reactstrap.github.io/?path=/docs/home-installation--page) (External react component library).
 
 Click the link to play with the application: https://star-wars-phi.vercel.app
 
