@@ -29,6 +29,7 @@ const MovieCard = ({ movie }) => {
     'Attack of the Clones': movieCoverFive,
     'Revenge of the Sith': movieCoverSix,
   };
+
   const fallBack =
     'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgAB/1h1vAAAAABJRU5ErkJggg=='; // Fallback image
 

@@ -15,14 +15,24 @@ const Accordion = ({ heading, content }) => {
     setIsExpanded(!isExpanded);
   };
 
+  const accordionId = `accordion-${heading.replace(/\s+/g, '-').toLowerCase()}`;
+  const contentId = `content-${heading.replace(/\s+/g, '-').toLowerCase()}`;
+
   return (
     <AccordionContainer>
-      <AccordionHeader onClick={toggleAccordion}>
-        <strong>{heading}</strong>
-        <i className="material-icons">{isExpanded ? 'expand_less' : 'expand_more'}</i>
+      <AccordionHeader
+        onClick={toggleAccordion}
+        aria-expanded={isExpanded}
+        aria-controls={contentId}
+        id={accordionId}
+        role="button"
+        aria-label={`${heading} accordion ${isExpanded ? 'expanded' : 'collapsed'}`}>
+        <span>{heading}</span>
+        <i aria-hidden="true">{isExpanded ? 'expand_less' : 'expand_more'}</i>
       </AccordionHeader>
+
       {isExpanded && content && (
-        <AccordionContent>
+        <AccordionContent id={contentId} aria-labelledby={accordionId} role="region">
           <List>
             {content?.length > 0 ? (
               content.map((item, index) => <ListItem key={index}>{item}</ListItem>)
@@ -35,6 +45,7 @@ const Accordion = ({ heading, content }) => {
     </AccordionContainer>
   );
 };
+
 Accordion.propTypes = {
   heading: PropTypes.string.isRequired,
   content: PropTypes.arrayOf(PropTypes.string).isRequired,
