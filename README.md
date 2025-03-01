@@ -17,10 +17,10 @@ Experience the application live: [Star Wars Movies App](https://star-wars-phi.ve
 
 Here are some screenshots from the application:
 
-![Movie List](./public/screenshots/movie-list.png)
+![Movie List](/screenshots/movie-list.png)
 *The home page showing the list of Star Wars movies*
 
-![Movie Details](./public/screenshots/movie-details.png)
+![Movie Details](/screenshots/movie-details.png)
 *Detailed view of a selected movie with information*
 
 ## ✨ Features
