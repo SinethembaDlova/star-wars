@@ -16,6 +16,7 @@ import {
 import { Row } from 'globalStyles';
 import { Col } from 'globalStyles';
 import Accordion from 'components/Accordion';
+import { replaceLastComma } from '../../utils/stringManipulation';
 
 const MovieDetails = ({ details }) => {
   const {
@@ -44,8 +45,8 @@ const MovieDetails = ({ details }) => {
       <Row justify="center">
         <Col width="70%" mr="20px" aria-label="movie-info">
           <Title>{title}</Title>
-          <Team>Director by: {director}</Team>
-          <Team>Producer by: {producer}</Team>
+          <Team>Director by: {replaceLastComma(director)}</Team>
+          <Team>Producer by: {replaceLastComma(producer)}</Team>
           <Description>{opening_crawl}</Description>
           <DateContainer aria-label="movie-dates">
             <DateItem width="50%">

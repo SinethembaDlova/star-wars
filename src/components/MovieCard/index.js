@@ -11,6 +11,7 @@ import {
   StyledLink,
   CardButton,
 } from './index.style';
+import { replaceLastComma } from '../../utils/stringManipulation';
 import movieCoverOne from '../../assets/images/movie_cover_1.png';
 import movieCoverTwo from '../../assets/images/movie_cover_2.png';
 import movieCoverThree from '../../assets/images/movie_cover_3.png';
@@ -41,7 +42,9 @@ const MovieCard = ({ movie }) => {
         <CardImageOverlay aria-label="movie-overlay">
           <CardHeader aria-label="movie-header">
             <CardTitle aria-label="movie-title">{title}</CardTitle>
-            <CardProducer aria-label="movie-producer">By: {producer}</CardProducer>
+            <CardProducer aria-label="movie-producer">
+              Produced By: {replaceLastComma(producer)}
+            </CardProducer>
           </CardHeader>
           <CardDescription aria-label="movie-description">{opening_crawl}</CardDescription>
           <StyledLink to={`/movies/${movie.id}`} aria-label={`view-details-${title}`}>
